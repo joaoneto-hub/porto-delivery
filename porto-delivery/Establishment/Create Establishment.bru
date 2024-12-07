@@ -1,0 +1,20 @@
+meta {
+  name: Create Establishment
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/Establishment
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Farmácia Saúde",
+    "category": "Farmácia",
+    "location": "Bairro Novo",
+    "CEP": 69927000
+  }
+}
