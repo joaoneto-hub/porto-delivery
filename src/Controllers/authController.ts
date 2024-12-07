@@ -24,7 +24,7 @@ class AuthController {
       reply.send({ user: userCredential.user });
     } catch (error) {
       const errorMessage =
-        error instanceof Error ? error.message : "Unknown error";
+        error instanceof Error ? error.message : "Error Desconhecido";
       reply.status(500).send({
         error: "Erro ao autenticar o usuário",
         details: errorMessage,

@@ -5,6 +5,9 @@ import EstablishmentRoutes from "./routes/EstablishmentRoutes";
 import ProductsRoutes from "./routes/ProductsRouter";
 import cors from "@fastify/cors";
 import dotenv from "dotenv";
+import "core-js/es6/promise";
+import "core-js/es6/set";
+import "core-js/es6/map";
 
 dotenv.config();
 

@@ -1,7 +1,7 @@
 import { db } from "../firebase";
 import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { Establishment } from "./Establishment";
+import { Establishment } from "./Types/EstablishmentTypes";
 
 class EstablishmentModel {
   // Busca todos os estabelecimentos no Firestore

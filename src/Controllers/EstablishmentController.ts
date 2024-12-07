@@ -1,7 +1,7 @@
 // src/controllers/userController.ts
 import { FastifyReply, FastifyRequest } from "fastify";
 import EstablishmentModel from "../Models/EstablishmentModel";
-import { Establishment } from "../Models/Establishment";
+import { Establishment } from "../Models/Types/EstablishmentTypes";
 
 class EstablishmentController {
   // Lista todos os estabelecimentos
@@ -24,11 +24,9 @@ class EstablishmentController {
       const establishments = await EstablishmentModel.getByUserId(userId);
 
       if (establishments.length === 0) {
-        reply
-          .status(404)
-          .send({
-            error: "Nenhum estabelecimento encontrado para este usuário.",
-          });
+        reply.status(404).send({
+          error: "Nenhum estabelecimento encontrado para este usuário.",
+        });
         return;
       }
 
