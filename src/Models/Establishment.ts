@@ -1,7 +1,7 @@
-export interface Establishment{
+export interface Establishment {
   id?: number;
-  name: string,
-  category: string,
-  location: string,
-  CEP: number
+  name: string;
+  category: string;
+  location: string;
+  CEP: number;
 }
