@@ -1,0 +1,20 @@
+meta {
+  name: Crete Product
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Produto teste joao para delecao",
+    "price": 99.99,
+    "description": "Um produto de teste do joao",
+    "userId": "XqQA5eeeEhRzpmDoREiE"
+  }
+}

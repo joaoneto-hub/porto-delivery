@@ -2,6 +2,7 @@ import Fastify from "fastify";
 import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
 import EstablishmentRoutes from "./routes/EstablishmentRoutes"
+import ProductsRoutes from "./routes/ProductsRouter";
 import cors from "@fastify/cors";
 import dotenv from 'dotenv';
 
@@ -17,6 +18,7 @@ const start = async () => {
   app.register(authRoutes);
   app.register(userRoutes);
   app.register(EstablishmentRoutes)
+  app.register(ProductsRoutes)
 
   try{
     await app.listen({ port: 3333 });
